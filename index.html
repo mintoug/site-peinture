@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <title>peinture bricolage</title>
 </head>
+
 <body>
     <header>
         <a href="#" class="logo">Peinture bricolage</a>
         <nav class="navigation">
-            <a href="#services">services</a>
-            <a href="#projets">projets</a>
-            <a href="#contact">contact</a>
+            <li class="nav-item">
+                <a href="#services" class="nav-link">services</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projets" class="nav-link">projets</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">contact</a>
+            </li>
+            </ul>
         </nav>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
     </header>
     <section class="main">
         <div>
-            <h2>Nous sommes des professionnels à votre service<br/>
-            <span>Peinture et travaux pour particuliers et sous traitance</span></h2>
+            <h2>Nous sommes des professionnels à votre service<br />
+                <span>Peinture et travaux pour particuliers et sous traitance</span>
+            </h2>
             <h3>rénovation, enduit, peinture, carrelage, isolation, cuisine...</h3>
             <a href="#projets" class="main-btn">Voir mes projets</a>
             <div class="social-icons">
@@ -29,6 +47,40 @@
             </div>
 
         </div>
+    </section>
+    <section class="galerie" id="projets">
+        <h2>Galerie Des photos</h2>
+        <img src="images/imb1.jpg" class="galerie-img" alt="">
+    </section>
+    <section class="domaine de compétences" id="services">
+        <h2>Nos compétences</h2>
+        <h3>peinture</h3>
+        <h3>carrelage</h3>
+        <h3>isolation</h3>
+        <h3>rénovation</h3>
+        
+    </section>
+    <section class="contact" id="contact">
+        <h2>contact</h2>
+        <div class="tel">
+           <p> 021457895</p>
+        </div>
+        <div class="mail">
+         <p>peinture-bricolage@gmail.com</p> 
+         <a href="mailto:peinture-bricolage@gmail.com">Nous écrire</a>
+        </div>
+        <div>
+            <p>Lieux d'intervention : 92,94,75,93</p>
+
+        </div>
+
+    </section>
+    <footer>
+
+        <p>@tous Droits réservés</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
+
 </html>

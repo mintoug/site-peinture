@@ -9,12 +9,11 @@ scroll-behavior: smooth;
 header{
     background-color: gainsboro;
     width: 100%;
-    position: fixed;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 200px;
+    z-index: 100;
 }
 .logo{
 text-decoration: none;
@@ -33,19 +32,33 @@ padding-left: 30px;
 .navigation a:hover{
     color: blueviolet;
 }
-section{
-    padding: 100px;
-   
-    
+.nav-item{
+   list-style: none;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
 }
 
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: blue;
+}
+section{
+    padding: 100px;
+}
 .main{
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
-    background: url('images/imb1.jpg');
-    background-position: right;
+    background: url('images/img2.jpg');
+    background-position: left;
     background-attachment: fixed;
     background-size: cover;
     color: aliceblue;
@@ -55,7 +68,7 @@ section{
     font-weight: 500;
 }
 .main h2 span{
-    color: brown;
+    color: rgb(172, 202, 63);
     font-size: 2.5em;
     font-weight: 600;
     display: inline-block;
@@ -90,9 +103,29 @@ section{
     font-size: 1.7em;
     padding-right: 30px;
 }
+.galerie-img{
+    width: 100%;
+    max-height: 100vh;
+}
+footer{
+    height: 70px;
+    background: #000;
+    color: azure;
+}
+footer p{
+    margin: 0 auto;
+    width: 30vw;
+    font-size: 1em;
+}
 @media (max-width:1023px) {
     header{
         padding: 12px 20px;
+    }
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
     }
     .navigation a{
         padding-left: 10px;
@@ -110,4 +143,43 @@ section{
         font-size: 1.8em;
     }
 
+}
+@media (max-width:768px){
+    .logo{
+        font-size: 1.1em;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active.bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active.bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active.bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: gainsboro;
+        color: blue;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .navigation.active{
+        left: 0;
+
+    }
+    .bar{
+        color: blue;
+    }
 }
